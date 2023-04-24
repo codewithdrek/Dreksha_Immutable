@@ -1,0 +1,35 @@
+package com.immutable;
+
+public final class ImmutableClass {
+
+	/*
+	 * There are many immutable classes like String, Boolean, Byte, Short, Integer,
+	 * Long, Float, Double etc. In short, all the wrapper classes and String class
+	 * is immutabl
+	 */
+	/*
+	 * Q1. What is the difference between Singleton and immutable? Design Ans.
+	 * Singleton class will have only one instance through out your application.
+	 * Once the instance has been created, you can use it to change the state of
+	 * that object, whereas for immutable class you cannot change the value that
+	 * means you cannot change the state of it once assigned.
+	 */
+
+	final String pancardNumber;
+
+	public ImmutableClass(String pancardNumber) {
+		this.pancardNumber = pancardNumber;
+	}
+
+	public String getPancardNumber() {
+		return pancardNumber;
+	}
+}
+
+class ImmutableDemo {
+	public static void main(String ar[]) {
+		ImmutableClass e = new ImmutableClass("ABC123");
+		String s1 = e.getPancardNumber();
+		System.out.println("Pancard Number: " + s1);
+	}
+}

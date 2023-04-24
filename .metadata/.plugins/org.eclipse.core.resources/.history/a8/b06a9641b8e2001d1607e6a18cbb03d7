@@ -1,0 +1,12 @@
+package com.immutable;
+class ImmutableDemo {
+	public static void main(String ar[]) {
+		ImmutableClass e = new ImmutableClass("ABC123");
+		String s1 = e.getPancardNumber();
+		System.out.println("Pancard Number: " + s1);
+		ImmutableClass e2 = new ImmutableClass("ABC8787"); //this wont change
+		String s2 = e.getPancardNumber();
+		System.out.println("Pancard Number: " + s2);
+		
+	}
+}
